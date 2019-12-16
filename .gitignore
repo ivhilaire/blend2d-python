@@ -2,7 +2,8 @@
 .kdev4
 *.kdev4
 
-build
+build/
+dist/
 *.egg-info/
 __pycache__/
 
