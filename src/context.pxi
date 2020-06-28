@@ -115,6 +115,9 @@ cdef class Context:
     def flush(self):
         _capi.blContextFlush(&self._self, 0)
 
+    def fill(self):
+        _capi.blContextFillAll(&self._self)
+
     def reset_matrix(self):
         """reset_matrix()
         Resets to the identity transform.
