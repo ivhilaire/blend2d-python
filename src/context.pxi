@@ -178,6 +178,12 @@ cdef class Context:
         _capi.blContextFillPathD(&self._self, &path._self)
         _capi.blContextStrokePathD(&self._self, &path._self)
 
+    def fill_path(self, Path path):
+        _capi.blContextFillPathD(&self._self, &path._self)
+
+    def stroke_path(self, Path path):
+        _capi.blContextStrokePathD(&self._self, &path._self)
+
     def draw_text(self, position, Font font, text):
         cdef:
             bytes utf8_text = _utf8_string(text)
